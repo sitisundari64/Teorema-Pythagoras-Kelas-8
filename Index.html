@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="id">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260917-05-f0c5fe2","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/83d6dfdadcd4750a.telemetry_sdk.js" integrity="sha512-XS4Dvzp6vbagZS9vFErihvr8aO3S0tH78KWUefn06fmL4WYqryBtZj/IOLITYj7dFA4gPVvPg1W/JB1DK3uLNQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teorema Pythagoras Interaktif</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,700;9..144,800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #3491d4;
+      --blue-dark: #17679f;
+      --yellow: #ffd434;
+      --ink: #16334c;
+      --paper: #f4fbff;
+      --aqua: #d9f6f1;
+      --aqua-ink: #08736d;
+      --card: #ffffff;
+      --muted: #60778b;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+      transition: background .3s ease, color .3s ease;
+    }
+
+    body.dark-mode {
+      --paper: #102537;
+      --ink: #edf8ff;
+      --card: #18354b;
+      --muted: #bdd2e0;
+      --aqua: #194c50;
+      --aqua-ink: #a8f7ed;
+      background: var(--paper);
+    }
+
+    .app-shell {
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      background:
+        radial-gradient(circle at 3% 3%, rgba(255,212,52,.28) 0 70px, transparent 71px),
+        radial-gradient(circle at 96% 9%, rgba(52,145,212,.16) 0 160px, transparent 161px),
+        var(--paper);
+    }
+
+    .topbar {
+      background: rgba(255,255,255,.92);
+      border-bottom: 1px solid rgba(52,145,212,.15);
+      backdrop-filter: blur(14px);
+    }
+    .dark-mode .topbar { background: rgba(16,37,55,.92); }
+
+    .brand-orb {
+      width: 45px;
+      height: 45px;
+      border-radius: 15px;
+      background: var(--yellow);
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      box-shadow: 4px 4px 0 var(--blue-dark);
+    }
+
+    .display-font { font-family: "Fraunces", serif; }
+    .page-view { display: none; animation: pageIn .45s ease both; }
+    .page-view.active { display: block; }
+
+    @keyframes pageIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .menu-card {
+      background: var(--card);
+      border: 2px solid transparent;
+      border-radius: 24px;
+      padding: 1.35rem;
+      min-height: 170px;
+      text-align: left;
+      box-shadow: 0 10px 24px rgba(23,103,159,.09);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .menu-card:hover, .menu-card:focus-visible {
+      transform: translateY(-6px) rotate(-.4deg);
+      border-color: var(--blue);
+      box-shadow: 0 18px 34px rgba(23,103,159,.18);
+      outline: none;
+    }
+    .menu-icon {
+      width: 48px; height: 48px; border-radius: 16px;
+      display: grid; place-items: center;
+      background: #e1f3ff; color: var(--blue-dark);
+      margin-bottom: 1rem;
+    }
+    .menu-card:nth-child(3n) .menu-icon { background: #fff5c5; color: #947000; }
+    .menu-card:nth-child(4n) .menu-icon { background: var(--aqua); color: var(--aqua-ink); }
+
+    .learning-card {
+      background: var(--card);
+      border-radius: 26px;
+      box-shadow: 0 12px 30px rgba(23,103,159,.10);
+      border: 1px solid rgba(52,145,212,.12);
+    }
+
+    .soft-panel {
+      background: linear-gradient(135deg, #e8f7ff, #ffffff);
+      border: 1px solid #c6eaff;
+      border-radius: 22px;
+    }
+    .dark-mode .soft-panel { background: linear-gradient(135deg, #173d56, #18354b); border-color: #32617d; }
+
+    .info-box {
+      background: var(--aqua);
+      color: var(--aqua-ink);
+      border-left: 6px solid #2dbfb1;
+      border-radius: 18px;
+    }
+
+    .btn-primary, .btn-secondary, .btn-outline {
+      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      padding: .78rem 1.15rem; border-radius: 14px; font-weight: 700;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .btn-primary { background: var(--blue); color: #fff; box-shadow: 0 6px 0 var(--blue-dark); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 0 var(--blue-dark); }
+    .btn-primary:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--blue-dark); }
+    .btn-secondary { background: var(--yellow); color: var(--ink); box-shadow: 0 5px 0 #cf9d00; }
+    .btn-outline { border: 2px solid var(--blue); color: var(--blue-dark); background: transparent; }
+    .dark-mode .btn-outline { color: #9fdcff; }
+    button:focus-visible, textarea:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+
+    .triangle-diagram { width: min(100%, 380px); margin: auto; }
+    .formula-pill { background: #12364e; color: #fff; border-radius: 18px; padding: 1rem 1.4rem; font-size: 1.35rem; font-weight: 800; }
+    .answer-btn {
+      width: 100%; text-align: left; padding: .9rem 1rem; border-radius: 14px;
+      border: 2px solid #d6e7f2; background: var(--card); color: var(--ink);
+      font-weight: 600; transition: .2s ease;
+    }
+    .answer-btn:hover { border-color: var(--blue); transform: translateX(3px); }
+    .answer-btn.selected { border-color: var(--blue); background: #eaf7ff; }
+    .answer-btn.correct { background: #d9f6e4; border-color: #35a85a; color: #126b31; }
+    .answer-btn.incorrect { background: #ffe1df; border-color: #e05650; color: #96241e; }
+
+    .progress-track { height: 11px; border-radius: 999px; background: #d9eaf4; overflow: hidden; }
+    .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--yellow), var(--blue)); border-radius: inherit; transition: width .5s ease; }
+
+    .match-card {
+      padding: .85rem; border: 2px solid #d7e6ef; border-radius: 15px;
+      background: var(--card); color: var(--ink); font-weight: 700;
+      transition: .2s ease;
+    }
+    .match-card:hover { border-color: var(--blue); }
+    .match-card.selected { border-color: var(--yellow); box-shadow: 0 0 0 4px rgba(255,212,52,.3); }
+    .match-card.matched { background: #d9f6e4; color: #126b31; border-color: #35a85a; pointer-events: none; }
+
+    .confetti { position: fixed; width: 10px; height: 15px; top: -20px; z-index: 90; animation: fall 2.8s linear forwards; }
+    @keyframes fall { to { transform: translateY(calc(100 * min(var(--vh, 1vh), 1vh))) rotate(620deg); opacity: 0; } }
+
+    .badge-award { display: none; animation: pop .5s ease both; }
+    .badge-award.show { display: flex; }
+    @keyframes pop { 0% { transform: scale(.6); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+    .video-placeholder {
+      min-height: 210px; border-radius: 22px; color: #fff;
+      background: linear-gradient(135deg, #17679f, #3491d4);
+      display: grid; place-items: center; text-align: center; overflow: hidden; position: relative;
+    }
+    .video-placeholder:before { content:""; position:absolute; width:170px; height:170px; border:25px solid rgba(255,255,255,.12); border-radius:50%; right:-45px; bottom:-55px; }
+
+    .nav-bottom { border-top: 1px solid rgba(52,145,212,.18); }
+    textarea { resize: vertical; background: var(--card); color: var(--ink); border: 2px solid #cfe4f1; }
+    .dark-mode textarea { border-color: #3e6680; }
+  </style>
+  <script src="/_sdk/8de366929c5f3b48.data_sdk.js" type="text/javascript" integrity="sha512-TyQ8k8cZj66xe/aENmn6RyZpdOFZXbAo5+KBG3PeFM+Q4qMTHU8xAqmq4ADClNfPrstgQYV6OzZHwLTnElzB2g=="></script>
+  <script src="/_sdk/a558f474cd01d324.resizing_sdk.js" type="text/javascript" integrity="sha512-evIEjzvRDdaV6tHT4THeYa18+ppfgUj4Zpx5W8R1gaF2VKcOba7TPP4x2YYqsfThPwuC5NaBFyUH6V81c3i8kA=="></script>
+ </head>
+ <body data-template-id="__page-root">
+  <div class="app-shell">
+   <header class="topbar sticky top-0 z-40">
+    <div class="w-full max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+     <div class="flex items-center gap-3">
+      <div class="brand-orb" aria-hidden="true">
+       <i data-lucide="triangle-right"></i>
+      </div>
+      <div>
+       <p data-template-id="header-kicker" class="canva-text text-xs font-bold tracking-widest uppercase text-sky-700"></p>
+       <h1 data-template-id="header-title" class="canva-text text-lg md:text-xl font-extrabold leading-tight"></h1>
+      </div>
+     </div>
+     <div class="flex items-center gap-2">
+      <div class="hidden sm:block text-right mr-2">
+       <p class="text-xs font-bold text-slate-500 dark:text-slate-300">Progres Belajar</p>
+       <p id="headerProgressText" class="text-sm font-extrabold text-sky-700">0%</p>
+      </div><button id="musicButton" type="button" class="w-10 h-10 rounded-xl bg-yellow-300 text-slate-800 grid place-items-center" aria-label="Nyalakan musik"> <i data-lucide="volume-2"></i> </button> <button id="themeButton" type="button" class="w-10 h-10 rounded-xl bg-sky-100 text-sky-800 grid place-items-center" aria-label="Ubah mode warna"> <i data-lucide="moon"></i> </button>
+     </div>
+    </div>
+   </header>
+   <main class="w-full max-w-7xl mx-auto px-4 md:px-6 py-7 md:py-10">
+    <section id="home" class="page-view active" aria-labelledby="home-title">
+     <div class="grid lg:grid-cols-2 gap-8 items-center mb-10">
+      <div>
+       <p data-template-id="hero-label" class="canva-tag inline-block px-4 py-2 rounded-full font-bold text-sm bg-yellow-300 text-slate-800"></p>
+       <h2 id="home-title" data-template-id="hero-title" class="canva-text display-font text-4xl md:text-6xl font-bold mt-4 leading-tight"></h2>
+       <p data-template-id="hero-description" class="canva-text text-lg mt-4 leading-relaxed text-slate-600 dark:text-slate-200"></p>
+       <div class="mt-6 flex flex-wrap gap-3"><button type="button" class="btn-primary" onclick="showPage('apersepsi')"><i data-lucide="rocket"></i><span data-template-id="hero-start-button" class="canva-text"></span></button> <button type="button" class="btn-outline" onclick="showPage('materi')"><i data-lucide="book-open"></i><span data-template-id="hero-material-button" class="canva-text"></span></button>
+       </div>
+      </div>
+      <div class="relative">
+       <div class="absolute -inset-3 rounded-[32px] bg-yellow-300 rotate-2 opacity-70"></div><img data-template-id="hero-image" loading="lazy" class="canva-image relative w-full h-72 md:h-96 object-cover rounded-[28px] shadow-xl">
+       <div class="absolute bottom-4 left-4 bg-white rounded-2xl px-4 py-3 shadow-lg">
+        <p data-template-id="hero-image-caption" class="canva-text text-sm font-bold text-sky-800"></p>
+       </div>
+      </div>
+     </div>
+     <section aria-labelledby="menu-title">
+      <div class="flex items-end justify-between gap-4 mb-5">
+       <div>
+        <p class="text-sm font-bold text-sky-700">PETA BELAJAR</p>
+        <h2 id="menu-title" data-template-id="menu-title" class="canva-text display-font text-3xl font-bold"></h2>
+       </div>
+       <div class="w-32 hidden md:block">
+        <div class="progress-track">
+         <div id="homeProgressBar" class="progress-fill"></div>
+        </div>
+       </div>
+      </div>
+      <nav class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" aria-label="Menu pembelajaran"><button type="button" class="menu-card" onclick="showPage('apersepsi')"><span class="menu-icon"><i data-lucide="lightbulb"></i></span><span data-template-id="menu-apersepsi" class="canva-text block text-lg"></span><span class="text-sm text-slate-500 dark:text-slate-300 mt-2 block">Mulai dengan rasa ingin tahu.</span></button> <button type="button" class="menu-card" onclick="showPage('awal')"><span class="menu-icon"><i data-lucide="clipboard-check"></i></span><span data-template-id="menu-awal" class="canva-text block text-lg"></span><span class="text-sm text-slate-500 dark:text-slate-300 mt-2 block">Cek pengetahuan awalmu.</span></button> <button type="button" class="menu-card" onclick="showPage('materi')"><span class="menu-icon"><i data-lucide="graduation-cap"></i></span><span data-template-id="menu-materi" class="canva-text block text-lg"></span><span class="text-sm text-slate-500 dark:text-slate-300 mt-2 block">Pahami konsep dengan visual.</span></button> <button type="button" class="menu-card" onclick="showPage('aktivitas')"><span class="menu-icon"><i data-lucide="mouse-pointer-2"></i></span><span data-template-id="menu-aktivitas" class="canva-text block text-lg"></span><span class="text-sm text-slate-500 dark:text-slate-300 mt-2 block">Cocokkan konsepnya.</span></button> <button type="button" class="menu-card" onclick="showPage('kuis')"><span class="menu-icon"><i data-lucide="brain"></i></span><span data-template-id="menu-kuis" class="canva-text block text-lg"></span><span class="text-sm text-slate-500 dark:text-slate-300 mt-2 block">Tantangan berpikir tingkat tinggi.</span></button> <button type="button" class="menu-card" onclick="showPage('akhir')"><span class="menu-icon"><i data-lucide="award"></i></span><span data-template-id="menu-akhir" class="canva-text block text-lg"></span><span class="text-sm text-slate-500 dark:text-slate-300 mt-2 block">Ukur pencapaianmu.</span></button> <button type="button" class="menu-card" onclick="showPage('refleksi')"><span class="menu-icon"><i data-lucide="message-circle-heart"></i></span><span data-template-id="menu-refleksi" class="canva-text block text-lg"></span><span class="text-sm text-slate-500 dark:text-slate-300 mt-2 block">Tulis langkah belajarmu.</span></button>
+      </nav>
+     </section>
+    </section>
+    <section id="apersepsi" class="page-view" aria-labelledby="apersepsi-title">
+     <div class="mb-6">
+      <p class="text-sm font-bold text-sky-700">LANGKAH 1 · APERSEPSI</p>
+      <h2 id="apersepsi-title" data-template-id="apersepsi-title" class="canva-text display-font text-4xl font-bold"></h2>
+      <p data-template-id="apersepsi-description" class="canva-text text-lg mt-2 text-slate-600 dark:text-slate-200"></p>
+     </div>
+     <div class="grid lg:grid-cols-1 gap-6"><img data-template-id="apersepsi-image" loading="lazy" class="canva-image w-full h-72 object-cover rounded-[25px] shadow-lg">
+     </div>
+     <div class="learning-card p-6 mt-6">
+      <h3 data-template-id="trigger-question-title" class="canva-text text-xl font-bold"></h3>
+      <div class="grid md:grid-cols-2 gap-4 mt-4">
+       <div class="soft-panel p-5">
+        <p data-template-id="trigger-question-one" class="canva-text font-bold text-lg"></p>
+       </div>
+       <div class="soft-panel p-5">
+        <p data-template-id="trigger-question-two" class="canva-text font-bold text-lg"></p>
+       </div>
+      </div>
+      <p data-template-id="trigger-helper" class="canva-text mt-5 text-slate-600 dark:text-slate-200"></p>
+     </div>
+     <div class="nav-bottom flex justify-between mt-8 pt-5">
+      <button class="btn-outline" onclick="showPage('home')"><i data-lucide="home"></i> Home</button><button class="btn-primary" onclick="showPage('awal')">Lanjut <i data-lucide="arrow-right"></i></button>
+     </div>
+    </section>
+    <section id="awal" class="page-view" aria-labelledby="awal-title">
+     <p class="text-sm font-bold text-sky-700">LANGKAH 2 · ASESMEN AWAL</p>
+     <h2 id="awal-title" data-template-id="awal-title" class="canva-text display-font text-4xl font-bold"></h2>
+     <p data-template-id="awal-description" class="canva-text text-lg mt-2 text-slate-600 dark:text-slate-200"></p>
+     <div class="learning-card p-5 md:p-7 mt-6">
+      <div id="initialQuiz"></div>
+      <div class="flex flex-wrap gap-3 mt-6"><button id="initialSubmit" type="button" class="btn-primary" onclick="gradeInitial()">Lihat Hasil</button> <button type="button" class="btn-outline" onclick="renderInitial()">Ulangi</button>
+      </div>
+      <div id="initialResult" class="hidden mt-5 info-box p-5" aria-live="polite"></div>
+     </div>
+    </section>
+    <section id="materi" class="page-view" aria-labelledby="materi-title">
+     <p class="text-sm font-bold text-sky-700">LANGKAH 3 · MATERI PEMBELAJARAN</p>
+     <h2 id="materi-title" data-template-id="materi-title" class="canva-text display-font text-4xl font-bold"></h2>
+     <p data-template-id="materi-intro" class="canva-text text-lg mt-2 text-slate-600 dark:text-slate-200"></p>
+     <div class="grid lg:grid-cols-2 gap-6 mt-6">
+      <article class="learning-card p-6">
+       <h3 data-template-id="material-definition-title" class="canva-text text-2xl font-bold"></h3>
+       <p data-template-id="material-definition-text" class="canva-text mt-3 leading-relaxed text-slate-600 dark:text-slate-200"></p>
+       <div class="formula-pill text-center mt-5">
+        a² + b² = c²
+       </div>
+       <p data-template-id="formula-description" class="canva-text text-center mt-4 font-semibold"></p>
+      </article>
+      <article class="learning-card p-4 flex items-center">
+       <svg class="triangle-diagram" viewbox="0 0 420 310" role="img" aria-label="Diagram segitiga siku-siku dengan sisi a, b, dan c"><path d="M70 250 L70 55 L360 250 Z" fill="#e1f3ff" stroke="#3491d4" stroke-width="8" stroke-linejoin="round" /> <path d="M70 217 L103 217 L103 250" fill="none" stroke="#ffd434" stroke-width="10" /> <text x="45" y="155" fill="#17679f" font-size="28" font-weight="700">
+         a
+        </text> <text x="207" y="282" fill="#17679f" font-size="28" font-weight="700">
+         b
+        </text> <text x="225" y="135" fill="#17679f" font-size="28" font-weight="700">
+         c
+        </text> <text x="120" y="42" fill="#16334c" font-size="20" font-weight="700">
+         sisi miring / hipotenusa
+        </text>
+       </svg>
+      </article>
+     </div>
+     <div class="grid md:grid-cols-3 gap-4 mt-6">
+      <div class="info-box p-5">
+       <h3 data-template-id="fact-title" class="canva-text font-extrabold text-lg"></h3>
+       <p data-template-id="fact-text" class="canva-text mt-2"></p>
+      </div>
+      <div class="info-box p-5">
+       <h3 data-template-id="important-title" class="canva-text font-extrabold text-lg"></h3>
+       <p data-template-id="important-text" class="canva-text mt-2"></p>
+      </div>
+      <div class="info-box p-5">
+       <h3 data-template-id="tip-title" class="canva-text font-extrabold text-lg"></h3>
+       <p data-template-id="tip-text" class="canva-text mt-2"></p>
+      </div>
+     </div>
+     <div class="grid lg:grid-cols-2 gap-6 mt-6">
+      <article class="learning-card p-6">
+       <h3 data-template-id="steps-title" class="canva-text text-2xl font-bold"></h3>
+       <ol class="mt-4 space-y-3 list-decimal list-inside font-medium leading-relaxed">
+        <li data-template-id="step-one" class="canva-text"></li>
+        <li data-template-id="step-two" class="canva-text"></li>
+        <li data-template-id="step-three" class="canva-text"></li>
+        <li data-template-id="step-four" class="canva-text"></li>
+       </ol>
+      </article>
+      <article class="learning-card p-6">
+       <h3 data-template-id="triples-title" class="canva-text text-2xl font-bold"></h3>
+       <div class="overflow-x-auto mt-4">
+        <table class="w-full text-left border-collapse">
+         <thead>
+          <tr class="bg-sky-100 text-sky-900">
+           <th class="p-3 rounded-tl-xl">a</th>
+           <th class="p-3">b</th>
+           <th class="p-3 rounded-tr-xl">c</th>
+          </tr>
+         </thead>
+         <tbody class="divide-y divide-sky-100">
+          <tr>
+           <td class="p-3">3</td>
+           <td class="p-3">4</td>
+           <td class="p-3 font-bold">5</td>
+          </tr>
+          <tr>
+           <td class="p-3">5</td>
+           <td class="p-3">12</td>
+           <td class="p-3 font-bold">13</td>
+          </tr>
+          <tr>
+           <td class="p-3">8</td>
+           <td class="p-3">15</td>
+           <td class="p-3 font-bold">17</td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p data-template-id="triples-note" class="canva-text mt-4 text-slate-600 dark:text-slate-200"></p>
+      </article>
+     </div>
+     <div class="learning-card overflow-hidden mt-6 grid md:grid-cols-2"><img data-template-id="materi-image" loading="lazy" class="canva-image h-64 md:h-full w-full object-cover">
+      <div class="p-6 flex flex-col justify-center">
+       <h3 data-template-id="application-title" class="canva-text text-2xl font-bold"></h3>
+       <p data-template-id="application-text" class="canva-text mt-3 leading-relaxed text-slate-600 dark:text-slate-200"></p>
+      </div>
+     </div>
+     <div class="nav-bottom flex justify-between mt-8 pt-5">
+      <button class="btn-outline" onclick="showPage('awal')"><i data-lucide="arrow-left"></i> Sebelumnya</button><button class="btn-primary" onclick="showPage('aktivitas')">Coba Aktivitas <i data-lucide="arrow-right"></i></button>
+     </div>
+    </section>
+    <section id="aktivitas" class="page-view" aria-labelledby="aktivitas-title">
+     <p class="text-sm font-bold text-sky-700">LANGKAH 4 · SIMULASI / AKTIVITAS</p>
+     <h2 id="aktivitas-title" data-template-id="aktivitas-title" class="canva-text display-font text-4xl font-bold"></h2>
+     <p data-template-id="aktivitas-description" class="canva-text text-lg mt-2 text-slate-600 dark:text-slate-200"></p>
+     <div class="grid lg:grid-cols-2 gap-6 mt-6"><img data-template-id="simulasi-image" loading="lazy" class="canva-image w-full h-72 object-cover rounded-[25px] shadow-lg">
+      <div class="learning-card p-6">
+       <h3 data-template-id="match-title" class="canva-text text-xl font-bold"></h3>
+       <p data-template-id="match-instruction" class="canva-text mt-2 text-slate-600 dark:text-slate-200"></p>
+       <div id="matchingBoard" class="grid sm:grid-cols-2 gap-3 mt-5"></div>
+       <div id="matchFeedback" class="hidden mt-5 p-4 rounded-xl font-semibold" aria-live="polite"></div><button type="button" class="btn-outline mt-5" onclick="renderMatching()"><i data-lucide="rotate-ccw"></i> Acak Lagi</button>
+      </div>
+     </div>
+    </section>
+    <section id="kuis" class="page-view" aria-labelledby="kuis-title">
+     <div class="flex flex-wrap justify-between gap-4 items-end">
+      <div>
+       <p class="text-sm font-bold text-sky-700">LANGKAH 5 · KUIS HOTS</p>
+       <h2 id="kuis-title" data-template-id="kuis-title" class="canva-text display-font text-4xl font-bold"></h2>
+       <p data-template-id="kuis-description" class="canva-text mt-2 text-slate-600 dark:text-slate-200"></p>
+      </div>
+      <div class="soft-panel px-5 py-3 font-bold">
+       <i data-lucide="timer" class="inline w-4"></i> <span id="quizTimer">10:00</span>
+      </div>
+     </div>
+     <div class="progress-track mt-6">
+      <div id="quizProgress" class="progress-fill"></div>
+     </div>
+     <div class="learning-card p-5 md:p-7 mt-5">
+      <div id="quizArea"></div>
+      <div id="quizFeedback" class="hidden mt-5 info-box p-5" aria-live="polite"></div>
+      <div class="flex flex-wrap gap-3 mt-6">
+       <button id="quizSubmit" type="button" class="btn-primary" onclick="gradeQuiz()">Selesaikan Kuis</button><button type="button" class="btn-outline" onclick="renderQuiz()">Ulangi Kuis</button>
+      </div>
+     </div>
+    </section>
+    <section id="akhir" class="page-view" aria-labelledby="akhir-title">
+     <p class="text-sm font-bold text-sky-700">LANGKAH 6 · ASESMEN AKHIR</p>
+     <h2 id="akhir-title" data-template-id="akhir-title" class="canva-text display-font text-4xl font-bold"></h2>
+     <p data-template-id="akhir-description" class="canva-text text-lg mt-2 text-slate-600 dark:text-slate-200"></p>
+     <div class="learning-card p-5 md:p-7 mt-6">
+      <div class="progress-track mb-5">
+       <div id="finalProgress" class="progress-fill"></div>
+      </div>
+      <div id="finalQuiz"></div>
+      <div class="flex flex-wrap gap-3 mt-6">
+       <button type="button" class="btn-primary" onclick="gradeFinal()">Lihat Nilai Akhir</button><button type="button" class="btn-outline" onclick="renderFinal()">Ulangi Asesmen</button>
+      </div>
+      <div id="finalResult" class="hidden mt-6"></div>
+      <div id="badgeAward" class="badge-award mt-5 items-center gap-4 p-5 rounded-2xl bg-yellow-100 border-2 border-yellow-300">
+       <div class="w-14 h-14 bg-yellow-300 rounded-full grid place-items-center text-yellow-900">
+        <i data-lucide="trophy"></i>
+       </div>
+       <div>
+        <p data-template-id="badge-title" class="canva-text text-xl font-extrabold text-yellow-900"></p>
+        <p data-template-id="badge-description" class="canva-text text-yellow-900"></p>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="refleksi" class="page-view" aria-labelledby="refleksi-title">
+     <p class="text-sm font-bold text-sky-700">LANGKAH 7 · REFLEKSI</p>
+     <h2 id="refleksi-title" data-template-id="refleksi-title" class="canva-text display-font text-4xl font-bold"></h2>
+     <p data-template-id="refleksi-description" class="canva-text text-lg mt-2 text-slate-600 dark:text-slate-200"></p>
+     <form id="reflectionForm" class="learning-card p-6 mt-6" onsubmit="saveReflection(event)">
+      <div class="grid md:grid-cols-2 gap-5">
+       <div>
+        <label data-template-id="reflection-label-one" class="canva-text block font-bold mb-2" for="reflectionOne"></label><textarea id="reflectionOne" rows="4" class="w-full rounded-xl p-3"></textarea>
+       </div>
+       <div>
+        <label data-template-id="reflection-label-two" class="canva-text block font-bold mb-2" for="reflectionTwo"></label><textarea id="reflectionTwo" rows="4" class="w-full rounded-xl p-3"></textarea>
+       </div>
+       <div>
+        <label data-template-id="reflection-label-three" class="canva-text block font-bold mb-2" for="reflectionThree"></label><textarea id="reflectionThree" rows="4" class="w-full rounded-xl p-3"></textarea>
+       </div>
+       <div>
+        <label data-template-id="reflection-label-four" class="canva-text block font-bold mb-2" for="reflectionFour"></label><textarea id="reflectionFour" rows="4" class="w-full rounded-xl p-3"></textarea>
+       </div>
+      </div><button type="submit" class="btn-primary mt-6"><i data-lucide="check-circle"></i><span data-template-id="reflection-button" class="canva-text"></span></button>
+      <p id="reflectionMessage" class="hidden mt-4 text-emerald-700 font-bold" aria-live="polite"></p>
+     </form>
+     <div class="nav-bottom flex justify-between mt-8 pt-5">
+      <button class="btn-outline" onclick="showPage('home')"><i data-lucide="home"></i> Home</button><button class="btn-secondary" onclick="showPage('materi')"><i data-lucide="rotate-ccw"></i> Ulangi Materi</button>
+     </div>
+    </section>
+   </main>
+   <footer class="w-full bg-[#12364e] text-white mt-8">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between gap-2">
+     <p data-template-id="footer-text" class="canva-text font-semibold"></p>
+     <p data-template-id="footer-note" class="canva-text text-white/75 text-sm"></p>
+    </div>
+   </footer>
+  </div>
+  <script src="/_sdk/22383239e6d7279e.editing_sdk.js" integrity="sha512-qvtUeUgPbBuWkcjob5tx6AGU1PQHkx4zgZWqqpaXOQqF0FGg35lPkDg2Eh+f2u6Np/H74EENvDhGRPcQgwZA+Q=="></script>
+  <script>
+    const initialQuestions = [
+      { q: "Pada segitiga siku-siku, sisi yang berhadapan dengan sudut siku-siku disebut ...", o: ["alas", "tinggi", "hipotenusa", "diagonal"], a: 2 },
+      { q: "Rumus Teorema Pythagoras adalah ...", o: ["a + b = c", "a² + b² = c²", "a × b = c", "a² − b² = c²"], a: 1 },
+      { q: "Jika sisi siku-siku 3 cm dan 4 cm, sisi miringnya adalah ...", o: ["5 cm", "6 cm", "7 cm", "8 cm"], a: 0 },
+      { q: "Segitiga dengan panjang sisi 6 cm, 8 cm, dan 10 cm adalah ...", o: ["segitiga sama sisi", "segitiga siku-siku", "segitiga tumpul", "segitiga lancip"], a: 1 },
+      { q: "Teorema Pythagoras dapat digunakan untuk mencari ...", o: ["keliling lingkaran", "panjang sisi segitiga siku-siku", "luas trapesium saja", "besar sudut semua bangun"], a: 1 }
+    ];
+
+    const hotsQuestions = [
+      { q: "Sebuah tangga panjangnya 10 m bersandar pada dinding. Kaki tangga 6 m dari dinding. Tinggi yang dicapai tangga adalah ...", o: ["4 m", "6 m", "8 m", "16 m"], a: 2, e: "Gunakan tinggi² = 10² − 6² = 100 − 36 = 64, sehingga tingginya 8 m." },
+      { q: "Sebuah taman berbentuk persegi panjang berukuran 9 m × 12 m. Jarak terpendek dari satu sudut ke sudut berseberangan adalah ...", o: ["15 m", "18 m", "21 m", "108 m"], a: 0, e: "Diagonal taman = √(9² + 12²) = √225 = 15 m." },
+      { q: "Manakah yang merupakan tripel Pythagoras?", o: ["4, 5, 6", "5, 6, 7", "7, 24, 25", "8, 10, 12"], a: 2, e: "7² + 24² = 49 + 576 = 625 = 25²." },
+      { q: "Sebuah kabel 13 m menghubungkan puncak tiang dengan tanah. Jika jarak titik kabel di tanah ke tiang 5 m, tinggi tiang adalah ...", o: ["8 m", "10 m", "12 m", "18 m"], a: 2, e: "Tinggi² = 13² − 5² = 169 − 25 = 144. Tinggi = 12 m." },
+      { q: "Diagonal sebuah persegi panjang 17 cm dan lebarnya 8 cm. Panjang persegi panjang itu adalah ...", o: ["9 cm", "12 cm", "15 cm", "25 cm"], a: 2, e: "Panjang² = 17² − 8² = 289 − 64 = 225. Panjang = 15 cm." },
+      { q: "Segitiga dengan sisi 10 cm, 24 cm, dan 26 cm diklasifikasikan sebagai ...", o: ["siku-siku", "lancip", "tumpul", "sama kaki"], a: 0, e: "10² + 24² = 100 + 576 = 676 = 26², maka segitiga siku-siku." },
+      { q: "Rute A ke B 8 km ke timur dan B ke C 15 km ke utara. Jarak lurus A ke C adalah ...", o: ["17 km", "23 km", "120 km", "7 km"], a: 0, e: "Jarak lurus = √(8² + 15²) = √289 = 17 km." },
+      { q: "Jika hipotenusa segitiga siku-siku 25 cm dan satu sisi lainnya 7 cm, sisi siku-siku yang belum diketahui adalah ...", o: ["18 cm", "20 cm", "24 cm", "32 cm"], a: 2, e: "Sisi² = 25² − 7² = 625 − 49 = 576. Sisi = 24 cm." },
+      { q: "Mengapa sisi terpanjang harus dijadikan c dalam rumus Pythagoras?", o: ["Karena c selalu alas", "Karena c adalah sisi miring", "Karena c selalu lebih pendek", "Karena c tidak perlu dikuadratkan"], a: 1, e: "Pada segitiga siku-siku, c menyatakan hipotenusa, yaitu sisi terpanjang di depan sudut siku-siku." },
+      { q: "Sebuah layar berbentuk persegi panjang memiliki panjang 16 cm dan diagonal 20 cm. Lebarnya adalah ...", o: ["4 cm", "8 cm", "12 cm", "36 cm"], a: 2, e: "Lebar² = 20² − 16² = 400 − 256 = 144. Lebar = 12 cm." }
+    ];
+
+    const finalQuestions = [
+      { q: "Sebuah persegi panjang memiliki ukuran 20 cm × 21 cm. Diagonalnya adalah ...", o: ["29 cm", "31 cm", "41 cm", "420 cm"], a: 0, e: "√(20² + 21²) = √841 = 29 cm." },
+      { q: "Panjang sisi miring segitiga dengan kaki 9 cm dan 40 cm adalah ...", o: ["41 cm", "49 cm", "31 cm", "1600 cm"], a: 0, e: "√(9² + 40²) = √1681 = 41 cm." },
+      { q: "Sebuah layang-layang memiliki diagonal saling tegak lurus. Jika setengah diagonalnya 5 cm dan 12 cm, sisi layang-layang adalah ...", o: ["13 cm", "17 cm", "7 cm", "60 cm"], a: 0, e: "Bagian layang-layang membentuk segitiga siku-siku 5-12-13." },
+      { q: "Sisi 11 cm, 60 cm, dan 61 cm membentuk segitiga ...", o: ["siku-siku", "lancip", "tumpul", "sama sisi"], a: 0, e: "11² + 60² = 121 + 3600 = 3721 = 61²." },
+      { q: "Sebuah kapal bergerak 12 km ke selatan lalu 16 km ke timur. Jarak terpendek dari titik awal adalah ...", o: ["20 km", "28 km", "4 km", "192 km"], a: 0, e: "√(12² + 16²) = √400 = 20 km." },
+      { q: "Jika c = 15 dan a = 9 pada segitiga siku-siku, nilai b adalah ...", o: ["6", "12", "18", "24"], a: 1, e: "b² = 15² − 9² = 225 − 81 = 144, sehingga b = 12." },
+      { q: "Diagonal sebuah kotak 26 cm dan salah satu sisinya 10 cm. Sisi lainnya adalah ...", o: ["16 cm", "24 cm", "36 cm", "20 cm"], a: 1, e: "√(26² − 10²) = √576 = 24 cm." },
+      { q: "Seorang petugas memasang kabel dari puncak tiang 35 m ke titik 12 m dari kaki tiang. Panjang kabel minimum adalah ...", o: ["37 m", "47 m", "23 m", "420 m"], a: 0, e: "√(35² + 12²) = √1369 = 37 m." },
+      { q: "Manakah pasangan sisi yang TIDAK membentuk segitiga siku-siku?", o: ["8, 15, 17", "12, 16, 20", "6, 8, 11", "20, 21, 29"], a: 2, e: "6² + 8² = 100, sedangkan 11² = 121, sehingga bukan segitiga siku-siku." },
+      { q: "Lantai ruangan 24 m × 32 m akan dipasang kabel diagonal. Kabel minimal yang diperlukan adalah ...", o: ["40 m", "56 m", "768 m", "8 m"], a: 0, e: "√(24² + 32²) = √1600 = 40 m." }
+    ];
+
+    let learnedSections = new Set();
+    let audioContext, musicInterval, musicOn = false, quizInterval, quizSeconds = 600;
+
+    function showPage(id) {
+      document.querySelectorAll('.page-view').forEach(page => page.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      learnedSections.add(id);
+      updateLearningProgress();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (id === 'kuis') startQuizTimer();
+      else stopQuizTimer();
+    }
+
+    function updateLearningProgress() {
+      const meaningful = ['apersepsi', 'awal', 'materi', 'aktivitas', 'kuis', 'akhir', 'refleksi'];
+      const percent = Math.round((meaningful.filter(x => learnedSections.has(x)).length / meaningful.length) * 100);
+      document.getElementById('headerProgressText').textContent = percent + '%';
+      document.getElementById('homeProgressBar').style.width = percent + '%';
+    }
+
+    function renderQuestionSet(targetId, questions, progressId) {
+      const target = document.getElementById(targetId);
+      target.innerHTML = questions.map((item, i) => `
+        <article class="question-item ${i === 0 ? '' : 'hidden'}" data-index="${i}">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full text-sm font-bold bg-sky-100 text-sky-800">Soal ${i + 1} dari ${questions.length}</span>
+            <span class="text-sm font-bold text-slate-500">${Math.round(((i + 1) / questions.length) * 100)}%</span>
+          </div>
+          <h3 class="text-xl font-bold leading-relaxed">${item.q}</h3>
+          <div class="space-y-3 mt-5">
+            ${item.o.map((option, oi) => `<button type="button" class="answer-btn" data-answer="${oi}" onclick="selectAnswer(this, '${targetId}', ${i}, '${progressId || ''}')"><span class="inline-grid place-items-center w-7 h-7 mr-2 rounded-full bg-sky-100 text-sky-800">${String.fromCharCode(65 + oi)}</span>${option}</button>`).join('')}
+          </div>
+          <div class="flex justify-between mt-6">
+            <button type="button" class="btn-outline ${i === 0 ? 'invisible' : ''}" onclick="moveQuestion('${targetId}', ${i}, -1, '${progressId || ''}')"><i data-lucide="arrow-left"></i> Sebelumnya</button>
+            <button type="button" class="btn-primary ${i === questions.length - 1 ? 'invisible' : ''}" onclick="moveQuestion('${targetId}', ${i}, 1, '${progressId || ''}')">Berikutnya <i data-lucide="arrow-right"></i></button>
+          </div>
+        </article>
+      `).join('');
+      if (progressId) document.getElementById(progressId).style.width = '10%';
+      lucide.createIcons();
+    }
+
+    function selectAnswer(button, targetId, index, progressId) {
+      const article = button.closest('.question-item');
+      article.querySelectorAll('.answer-btn').forEach(btn => btn.classList.remove('selected'));
+      button.classList.add('selected');
+      if (progressId) {
+        const count = [...document.querySelectorAll('#' + targetId + ' .answer-btn.selected')].length;
+        const total = document.querySelectorAll('#' + targetId + ' .question-item').length;
+        document.getElementById(progressId).style.width = Math.max(((count / total) * 100), 10) + '%';
+      }
+    }
+
+    function moveQuestion(targetId, index, direction, progressId) {
+      const all = [...document.querySelectorAll('#' + targetId + ' .question-item')];
+      all[index].classList.add('hidden');
+      all[index + direction].classList.remove('hidden');
+      if (progressId) document.getElementById(progressId).style.width = ((index + direction + 1) / all.length * 100) + '%';
+      lucide.createIcons();
+    }
+
+    function gradeSet(targetId, questions) {
+      let correct = 0;
+      document.querySelectorAll('#' + targetId + ' .question-item').forEach((article, i) => {
+        const selected = article.querySelector('.answer-btn.selected');
+        article.querySelectorAll('.answer-btn').forEach((button, oi) => {
+          button.disabled = true;
+          if (oi === questions[i].a) button.classList.add('correct');
+          else if (selected === button) button.classList.add('incorrect');
+        });
+        if (selected && Number(selected.dataset.answer) === questions[i].a) correct++;
+      });
+      return Math.round((correct / questions.length) * 100);
+    }
+
+    function renderInitial() {
+      renderQuestionSet('initialQuiz', initialQuestions);
+      document.getElementById('initialResult').classList.add('hidden');
+      document.getElementById('initialSubmit').disabled = false;
+    }
+
+    function gradeInitial() {
+      const score = gradeSet('initialQuiz', initialQuestions);
+      const result = document.getElementById('initialResult');
+      result.classList.remove('hidden');
+      result.innerHTML = `<strong>Skor awalmu: ${score}/100.</strong><br>${score >= 80 ? 'Hebat! Kamu sudah memiliki bekal kuat. Lanjutkan untuk memperdalam penerapan konsepnya.' : 'Bagus, ini adalah titik awalmu. Pelajari materi dengan santai—kesalahan adalah bagian penting dari proses bertumbuh!'}`;
+      document.getElementById('initialSubmit').disabled = true;
+      learnedSections.add('awal'); updateLearningProgress();
+    }
+
+    function renderQuiz() {
+      stopQuizTimer();
+      quizSeconds = 600;
+      renderQuestionSet('quizArea', hotsQuestions, 'quizProgress');
+      document.getElementById('quizFeedback').classList.add('hidden');
+      document.getElementById('quizSubmit').disabled = false;
+      updateTimer();
+      startQuizTimer();
+    }
+
+    function gradeQuiz() {
+      stopQuizTimer();
+      const score = gradeSet('quizArea', hotsQuestions);
+      const feedback = document.getElementById('quizFeedback');
+      feedback.classList.remove('hidden');
+      feedback.innerHTML = `<h3 class="text-xl font-extrabold">Skor Kuis: ${score}/100</h3><p class="mt-2">${score >= 90 ? 'Luar biasa! Strategi berpikirmu sudah sangat kuat.' : 'Terus bertumbuh! Baca pembahasan pada setiap soal dan coba lagi untuk memperkuat strategimu.'}</p><div class="mt-4 space-y-2">${hotsQuestions.map((x, i) => `<p><strong>${i + 1}.</strong> ${x.e}</p>`).join('')}</div>`;
+      document.getElementById('quizSubmit').disabled = true;
+      if (score >= 90) launchConfetti();
+      learnedSections.add('kuis'); updateLearningProgress();
+    }
+
+    function renderFinal() {
+      renderQuestionSet('finalQuiz', finalQuestions, 'finalProgress');
+      document.getElementById('finalResult').classList.add('hidden');
+      document.getElementById('badgeAward').classList.remove('show');
+    }
+
+    function gradeFinal() {
+      const score = gradeSet('finalQuiz', finalQuestions);
+      let predicate = score >= 90 ? 'Sangat Baik' : score >= 80 ? 'Baik' : score >= 70 ? 'Cukup' : 'Perlu Bimbingan';
+      const result = document.getElementById('finalResult');
+      result.classList.remove('hidden');
+      result.innerHTML = `<div class="soft-panel p-6"><p class="text-sm font-bold text-sky-700">NILAI AKHIR</p><p class="display-font text-6xl font-bold text-sky-800 mt-1">${score}</p><p class="text-xl font-extrabold mt-2">Predikat: ${predicate}</p><p class="mt-3 text-slate-600 dark:text-slate-200">${score >= 70 ? 'Selamat! Kamu telah menyelesaikan perjalanan belajar Teorema Pythagoras.' : 'Jangan menyerah. Ulangi materi dan tantang dirimu kembali—kemampuanmu dapat berkembang melalui latihan.'}</p></div><div class="mt-4 text-sm leading-relaxed">${finalQuestions.map((x, i) => `<p><strong>${i + 1}.</strong> ${x.e}</p>`).join('')}</div>`;
+      if (score >= 90) { document.getElementById('badgeAward').classList.add('show'); launchConfetti(); }
+      learnedSections.add('akhir'); updateLearningProgress();
+    }
+
+    const matchingPairs = [
+      { id: 'a', text: '3, 4, 5', type: 'triple' }, { id: 'a', text: 'Tripel Pythagoras paling dikenal', type: 'meaning' },
+      { id: 'b', text: 'Hipotenusa', type: 'triple' }, { id: 'b', text: 'Sisi di depan sudut siku-siku', type: 'meaning' },
+      { id: 'c', text: 'a² + b² = c²', type: 'triple' }, { id: 'c', text: 'Rumus Teorema Pythagoras', type: 'meaning' },
+      { id: 'd', text: '5, 12, 13', type: 'triple' }, { id: 'd', text: 'Contoh tripel Pythagoras', type: 'meaning' }
+    ];
+    let selectedMatch = null;
+
+    function renderMatching() {
+      selectedMatch = null;
+      const mixed = [...matchingPairs].sort(() => Math.random() - .5);
+      document.getElementById('matchingBoard').innerHTML = mixed.map((item, i) => `<button type="button" class="match-card" data-pair="${item.id}" onclick="selectMatch(this)">${item.text}</button>`).join('');
+      document.getElementById('matchFeedback').classList.add('hidden');
+    }
+
+    function selectMatch(button) {
+      if (!selectedMatch) {
+        selectedMatch = button;
+        button.classList.add('selected');
+        return;
+      }
+      if (selectedMatch === button) return;
+      const feedback = document.getElementById('matchFeedback');
+      feedback.classList.remove('hidden');
+      if (selectedMatch.dataset.pair === button.dataset.pair) {
+        selectedMatch.classList.remove('selected');
+        selectedMatch.classList.add('matched');
+        button.classList.add('matched');
+        feedback.className = 'mt-5 p-4 rounded-xl font-semibold bg-emerald-100 text-emerald-800';
+        feedback.textContent = 'Cocok! Kamu berhasil menghubungkan konsep dengan tepat. Teruskan, ya!';
+      } else {
+        selectedMatch.classList.remove('selected');
+        feedback.className = 'mt-5 p-4 rounded-xl font-semibold bg-yellow-100 text-yellow-900';
+        feedback.textContent = 'Belum cocok, tetapi kamu sedang belajar. Amati kembali kata kunci pada kedua kartu lalu coba lagi!';
+      }
+      selectedMatch = null;
+      if (document.querySelectorAll('.match-card.matched').length === matchingPairs.length) {
+        learnedSections.add('aktivitas'); updateLearningProgress();
+      }
+    }
+
+    function updateTimer() {
+      const min = Math.floor(quizSeconds / 60);
+      const sec = quizSeconds % 60;
+      document.getElementById('quizTimer').textContent = String(min).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
+    }
+    function startQuizTimer() {
+      stopQuizTimer();
+      quizInterval = setInterval(() => {
+        if (quizSeconds > 0) { quizSeconds--; updateTimer(); }
+        else { stopQuizTimer(); gradeQuiz(); }
+      }, 1000);
+    }
+    function stopQuizTimer() { if (quizInterval) clearInterval(quizInterval); }
+
+    function launchConfetti() {
+      const colors = ['#3491d4', '#ffd434', '#2dbfb1', '#ff746c', '#ffffff'];
+      for (let i = 0; i < 70; i++) {
+        const piece = document.createElement('span');
+        piece.className = 'confetti';
+        piece.style.left = Math.random() * 100 + '%';
+        piece.style.background = colors[i % colors.length];
+        piece.style.animationDelay = Math.random() * .6 + 's';
+        piece.style.transform = `rotate(${Math.random() * 360}deg)`;
+        document.body.appendChild(piece);
+        setTimeout(() => piece.remove(), 3600);
+      }
+    }
+
+    function toggleMusic() {
+      const button = document.getElementById('musicButton');
+      if (!musicOn) {
+        audioContext = audioContext || new (window.AudioContext || window.webkitAudioContext)();
+        const notes = [261.63, 329.63, 392, 329.63, 293.66, 369.99, 440, 369.99];
+        let index = 0;
+        const playNote = () => {
+          if (!musicOn) return;
+          const osc = audioContext.createOscillator();
+          const gain = audioContext.createGain();
+          osc.type = 'sine'; osc.frequency.value = notes[index++ % notes.length];
+          gain.gain.setValueAtTime(.035, audioContext.currentTime);
+          gain.gain.exponentialRampToValueAtTime(.001, audioContext.currentTime + .45);
+          osc.connect(gain); gain.connect(audioContext.destination);
+          osc.start(); osc.stop(audioContext.currentTime + .48);
+        };
+        playNote(); musicInterval = setInterval(playNote, 550);
+        musicOn = true; button.innerHTML = '<i data-lucide="volume-x"></i>'; button.setAttribute('aria-label', 'Matikan musik');
+      } else {
+        clearInterval(musicInterval); musicOn = false; button.innerHTML = '<i data-lucide="volume-2"></i>'; button.setAttribute('aria-label', 'Nyalakan musik');
+      }
+      lucide.createIcons();
+    }
+
+    function saveReflection(event) {
+      event.preventDefault();
+      const message = document.getElementById('reflectionMessage');
+      message.textContent = 'Refleksimu sudah siap. Bagikan jawabanmu kepada guru atau teman diskusimu.';
+      message.classList.remove('hidden');
+      learnedSections.add('refleksi'); updateLearningProgress();
+    }
+
+    document.getElementById('musicButton').addEventListener('click', toggleMusic);
+    document.getElementById('themeButton').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      document.getElementById('themeButton').innerHTML = isDark ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
+      lucide.createIcons();
+    });
+
+    renderInitial();
+    renderMatching();
+    renderQuiz();
+    renderFinal();
+    stopQuizTimer();
+    lucide.createIcons();
+  </script>
+ </body>
+</html>
